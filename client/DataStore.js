@@ -70,8 +70,8 @@ class DataStore {
     }
 
     fetchPrice() {
-        Axios.get('https://blockchain.info/ticker').then((result) => {
-            this.usdbtc = result.data.USD.last;
+        Axios.get('https://api.coinmarketcap.com/v2/ticker/2083/').then((result) => {
+            this.usdbtc = result.data.quotes.USD.price;
         });
     }
 }
